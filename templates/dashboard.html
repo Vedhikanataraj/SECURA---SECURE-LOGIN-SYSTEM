@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="background: #e9ecef; padding: 20px; border-radius: 8px; margin-top: 20px;">
+        <h3 style="color: #198754;">Welcome, {{ current_user.username }}! 🎉</h3>
+        <p>You have successfully authenticated and accessed the secure dashboard.</p>
+        
+        <form action="{{ url_for('logout') }}" method="GET" style="margin-top: 20px;">
+            <button type="submit" style="background-color: #dc3545;">Secure Logout</button>
+        </form>
+    </div>
+{% endblock %}

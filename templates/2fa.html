@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Two-Factor Authentication</h3>
+    <p>Please enter the 6-digit code from your authenticator app.</p>
+    
+    <form method="POST" action="">
+        <input type="text" name="token" placeholder="6-Digit Code" required autocomplete="off">
+        <button type="submit">Verify</button>
+    </form>
+    
+    <p style="margin-top: 20px; font-size: 14px;">
+        <a href="{{ url_for('login') }}">Cancel and return to login</a>
+    </p>
+{% endblock %}
